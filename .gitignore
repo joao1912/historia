@@ -1,45 +1,35 @@
-#--------------------------#
-# Magento Default Files    #
-#--------------------------#
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-/PATCH_*.sh
+# dependencies
+node_modules/
 
-/app/etc/local.xml
+# Expo
+.expo/
+dist/
+web-build/
 
-/media/*
-!/media/.htaccess
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
-!/media/customer
-/media/customer/*
-!/media/customer/.htaccess
+# Metro
+.metro-health-check*
 
-!/media/dhl
-/media/dhl/*
-!/media/dhl/logo.jpg
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 
-!/media/downloadable
-/media/downloadable/*
-!/media/downloadable/.htaccess
+# macOS
+.DS_Store
+*.pem
 
-!/media/xmlconnect
-/media/xmlconnect/*
+# local env files
+.env*.local
 
-!/media/xmlconnect/custom
-/media/xmlconnect/custom/*
-!/media/xmlconnect/custom/ok.gif
-
-!/media/xmlconnect/original
-/media/xmlconnect/original/*
-!/media/xmlconnect/original/ok.gif
-
-!/media/xmlconnect/system
-/media/xmlconnect/system/*
-!/media/xmlconnect/system/ok.gif
-
-/var/*
-!/var/.htaccess
-
-!/var/package
-/var/package/*
-!/var/package/*.xml
-
+# typescript
+*.tsbuildinfo
