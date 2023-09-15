@@ -1,40 +1,41 @@
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
-import Borda from './components/borda';
+import Borda from "./components/Borda.js"
 import * as Animatable from 'react-native-animatable';
 import { useRef, useState } from 'react';
+import images from './assets';
 
 const imagesComum = [
-  "example.png",
-  "Frog.png",
-  "Item__00.png",
-  "Item__03.png",
-  "Item__08.png",
-  "Item__24.png",
-  "Item__36.png",
-  "Item__38.png",
-  "Item__39.png",
-  "Item__58.png",
-  "Mummy.png",
-  "observer.png",
-  "Ogre.png",
-  "Sentinel.png",
-  "slime.png",
-  "steel-eagle.png",
-  "tree-2.png",
-  "wizard.png"
+  "example",
+  "Frog",
+  "Item__00",
+  "Item__03",
+  "Item__08",
+  "Item__24",
+  "Item__36",
+  "Item__38",
+  "Item__39",
+  "Item__58",
+  "Mummy",
+  "observer",
+  "Ogre",
+  "Sentinel",
+  "slime",
+  "steel_eagle",
+  "tree_2",
+  "wizard"
 ]
 
 const imagesRaras = [
-  "Drone.png",
-  "Item__19.png",
-  "Item__22.png",
-  "Item__27.png",
-  "Item__43.png",
-  "Item__59.png",
-  "Item__60.png",
-  "Item__68.png",
-  "Item__71.png",
-  "Metal-Slug.png",
+  "Drone",
+  "Item__19",
+  "Item__22",
+  "Item__27",
+  "Item__43",
+  "Item__59",
+  "Item__60",
+  "Item__68",
+  "Item__71",
+  "Metal_Slug",
 ]
 
 
@@ -81,10 +82,10 @@ export default function App() {
 
     if (raridade == "Raro") {
       let index = Math.floor(Math.random() * imagesRaras.length)
-      setCartaAleatoria(imagesRaras[index])
+      setCartaAleatoria(images[imagesRaras[index]])
     } else {
       let index = Math.floor(Math.random() * imagesComum.length)
-      setCartaAleatoria(imagesComum[index])
+      setCartaAleatoria(images[imagesComum[index]])
     }
     
   }
@@ -125,7 +126,7 @@ export default function App() {
                 cartaAleatoria == null ? (
                   <View/>
                 ) : (
-                  <Image style={styles.imgCarta} source={require(`./assets/${cartaAleatoria}`)}/>
+                  <Image style={styles.imgCarta} source={cartaAleatoria}/>
                 )
               }
              
